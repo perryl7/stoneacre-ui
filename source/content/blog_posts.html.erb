@@ -1,0 +1,13 @@
+---
+title: Blog Posts
+entity: Post
+edit_link: /content/edit/blog_post.html
+sidebar_id: blog
+---
+
+<% blog_titles = ['Blog Alpha', 'Blog Bravo', 'Blog Charlie'] %>
+<% table_headers = ['Post Title', 'Blog'] %>
+<% table_rows = [] %>
+<% (1..5).each { table_rows << [ lorem.sentence, blog_titles.sample ] } %>
+
+<%= partial 'table', locals: { table_headers: table_headers, table_rows: table_rows } %>

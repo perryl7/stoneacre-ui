@@ -1,0 +1,29 @@
+<% label ||= 'Street Address' %>
+
+<label for="address1"><%= label %></label>
+<input type="text" id="address1" class="input-block-level">
+<input type="text" id="address2" class="input-block-level">
+<div class="controls controls-row-fluid">
+<div class="row-fluid">
+  <div class="span5">
+    <label for="city">City</label>
+    <input type="text" id="city" class="input-block-level">
+  </div>
+  <div class="span2">
+    <label for="state">State</label>
+    <input type="text" id="state" class="input-block-level">
+  </div>
+  <div class="span2">
+    <label for="zip" class="nowrap">Zip Code</label>
+    <input type="text" id="zip" class="input-block-level">
+  </div>
+  <div class="span3">
+    <label for="country">Country</label>
+    <select id="country" class="input-block-level">
+      <option>United States</option>
+      <option>France</option>
+      <option>Germany</option>
+    </select>
+  </div>
+</div>
+

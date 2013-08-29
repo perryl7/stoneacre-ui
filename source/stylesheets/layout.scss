@@ -1,0 +1,174 @@
+body {
+  margin-top: 20px;
+}
+
+// Sidebar nav
+.sidebar-nav {
+  padding: 9px 0;
+
+  .nav-header {
+    &:hover {
+      text-decoration: none;
+      background-color: #eeeeee;
+    }
+
+    a {
+      color: #999;
+
+      &:hover {
+        color: #888;
+      }
+    }
+
+  }
+
+  .nav-list {
+    li {
+      display: none;
+    }
+
+    .nav-header, .divider {
+      display: list-item;
+    }
+  }
+
+  .nav-list.active {
+    li {
+      display: list-item;
+    }
+
+    .nav-header a {
+      color: #444;
+    }
+  }
+
+  // Nested nav lists
+  .nav-list .nav-list {
+    & > li > a {
+      padding-left: 30px;
+    }
+
+    & > li > a,
+    & .nav-header {
+      margin-left:  -30px;
+      margin-right: -30px;
+    }
+  }
+}
+
+.column-edit {
+  text-align: center !important;
+  width: 40px;
+}
+
+fieldset {
+  margin-bottom: 20px;
+
+  & .btn:last-child {
+    margin-bottom: 20px;
+  }
+}
+
+input, textarea, select, label.checkbox, .btn-input {
+  margin-bottom: 20px !important;
+}
+
+.help-block {
+  margin-top: -15px;
+  margin-bottom: 20px !important;
+}
+
+form .btn {
+  margin-left: 6px;
+
+  &:first-child, &.dropdown-toggle {
+    margin-left: 0;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+label.above-input {
+  margin-bottom: 0 !important;
+
+  input {
+    margin-bottom: 0 !important;
+  }
+}
+
+// Sidebar Wells
+.well fieldset {
+  margin-bottom: 0 !important;
+
+  *:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+// Date and Time form controls
+.controls-date-time {
+  #startDate, #endDate {
+    margin-right: 6px;
+  }
+
+  .dash {
+    display: inline-block;
+    margin-top: -20px;
+    vertical-align: middle;
+  }
+}
+
+.ticket-details {
+  label.checkbox {
+    margin-top: 28px;
+  }
+}
+
+// Publication Settings
+.publication-settings {
+  .publish-date {
+    display: none;
+    margin-top: 20px;
+
+    input {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+// Parent Blog Settings
+.parent-blog-settings {
+  .new-blog {
+    display: none;
+  }
+}
+
+// Calendar
+.calendar {
+  width: 100%;
+
+  thead {
+    tr {
+      height: 40px;
+    }
+
+    th {
+      text-align: left;
+    }
+  }
+
+  tbody {
+    tr {
+      height: 80px;
+      vertical-align: top;
+    }
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: (100% / 7);
+  }
+}

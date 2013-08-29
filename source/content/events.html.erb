@@ -1,0 +1,12 @@
+---
+title: Events
+entity: Event
+edit_link: /content/edit/event.html
+sidebar_id: event
+---
+
+<% table_headers = ['Event Title', 'Start Date', 'Attendees'] %>
+<% table_rows = [] %>
+<% (1..5).each { table_rows << [ lorem.sentence, lorem.date, "#{Random.rand(100)} / 100" ] } %>
+
+<%= partial 'table', locals: { table_headers: table_headers, table_rows: table_rows } %>

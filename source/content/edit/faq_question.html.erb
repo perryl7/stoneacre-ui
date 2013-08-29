@@ -1,0 +1,40 @@
+---
+title: FAQ Question
+entity: Question
+---
+
+<form>
+  <div class="row-fluid">
+    <div class="span8">
+      <fieldset>
+        <legend>Question Content</legend>
+
+        <label for="parentFAQ">Add question to:</label>
+        <select id="parentFAQ">
+          <option>Bacon Facts</option>
+          <option>Steak Questions &amp; Answers</option>
+          <option>Grilling FAQ</option>
+        </select>
+
+        <label for="question">Question</label>
+        <input type="text" id="question" class="input-block-level">
+
+        <label for="shortAnswer">Short Answer</label>
+        <textarea id="shortAnswer" class="input-block-level" rows="4"></textarea>
+
+        <label class="checkbox pull-right above-input">
+          <input type="checkbox" id="sameAnswer"> Same as the short answer
+        </label>
+        <label for="detailedAnswer">Detailed Answer</label>
+        <textarea id="detailedAnswer" class="input-block-level" rows="16"></textarea>
+      </fieldset>
+
+      <%= partial 'comments' %>
+    </div>
+
+    <div class="span4">
+      <%= partial 'publication' %>
+      <%= partial 'url_settings' %>
+    </div>
+  </div>
+</form>

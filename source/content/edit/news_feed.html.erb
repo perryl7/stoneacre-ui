@@ -1,0 +1,26 @@
+---
+title: News Feed
+entity: Feed
+---
+
+<form>
+  <div class="row-fluid">
+    <div class="span8">
+      <fieldset>
+        <legend>Feed Details</legend>
+
+        <%= partial 'title' %>
+
+        <label for="feedURL">Feed URL</label>
+        <input id="feedURL" type="url" class="input-block-level">
+      </fieldset>
+
+      <%= partial 'comments' %>
+    </div>
+
+    <div class="span4">
+      <%= partial 'publication' %>
+      <%= partial 'url_settings' %>
+    </div>
+  </div>
+</form>

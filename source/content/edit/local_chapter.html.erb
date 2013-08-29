@@ -1,0 +1,70 @@
+---
+title: Local Chapter
+entity: Chapter
+---
+
+<form>
+  <div class="row-fluid">
+    <div class="span8">
+      <fieldset>
+        <legend>Chapter Details</legend>
+
+        <label for="chapterName">Chapter Name</label>
+        <input type="text" id="chapterName" class="input-block-level">
+
+        <div class="row-fluid">
+          <div class="span5">
+            <label for="city">City</label>
+            <input type="text" id="city" class="input-block-level">
+          </div>
+          <div class="span2">
+            <label for="state">State</label>
+            <input type="text" id="state" class="input-block-level">
+          </div>
+          <div class="span3">
+            <label for="country">Country</label>
+            <select id="country" class="input-block-level">
+              <option>United States</option>
+              <option>France</option>
+              <option>Germany</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Branding</legend>
+
+        <label for="motto">Chapter Motto</label>
+        <input type="text" id="chapterMotto" class="input-block-level">
+
+        <label>Chapter Logo</label>
+        <button class="btn">Add Image</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Headquarters Details</legend>
+
+        <label for="hqName">Name</label>
+        <input type="text" id="hqName" class="input-block-level">
+
+        <%= partial 'address' %>
+
+        <label for="hqPhone">Phone Number</label>
+        <input type="text" id="hqPhone" class="input-large">
+
+        <label for="hqWebsite">Website</label>
+        <input type="url" id="hqWebsite" class="input-block-level">
+      </fieldset>
+
+
+      <%= partial 'comments' %>
+    </div>
+
+    <div class="span4">
+      <%= partial 'publication' %>
+      <%= partial 'fundraising_settings' %>
+      <%= partial 'url_settings' %>
+    </div>
+  </div>
+</form>

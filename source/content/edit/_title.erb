@@ -1,0 +1,4 @@
+<% label ||= "Title" %>
+<% id = label.downcase.gsub(/\s+/, '_') %>
+<label for="<%= id %>"><%= label %></label>
+<input id="<%= id %>" type="text" class="input-block-level">

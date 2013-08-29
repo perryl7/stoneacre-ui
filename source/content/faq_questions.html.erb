@@ -1,0 +1,13 @@
+---
+title: FAQ Questions
+entity: Question
+edit_link: /content/edit/faq_question.html
+sidebar_id: faq
+---
+
+<% faq_titles = ['Bacon Facts', 'Steak Questions & Answers', 'Grilling FAQ'] %>
+<% table_headers = ['Question', 'FAQ'] %>
+<% table_rows = [] %>
+<% (1..5).each { table_rows << [ lorem.sentence, faq_titles.sample ] } %>
+
+<%= partial 'table', locals: { table_headers: table_headers, table_rows: table_rows } %>

@@ -1,0 +1,12 @@
+---
+title: Basic Pages
+entity: Page
+edit_link: /content/edit/basic_page.html
+sidebar_id: basic_page
+---
+
+<% table_headers = ['Title'] %>
+<% table_rows = [] %>
+<% (1..5).each { table_rows << [ lorem.sentence ] } %>
+
+<%= partial 'table', locals: { table_headers: table_headers, table_rows: table_rows } %>

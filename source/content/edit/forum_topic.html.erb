@@ -1,0 +1,32 @@
+---
+title: Forum Topic
+entity: Topic
+---
+
+<form>
+  <div class="row-fluid">
+    <div class="span8">
+      <fieldset>
+        <legend>Topic Content</legend>
+
+        <label for="parentForum">Add topic to:</label>
+        <select id="parentForum">
+          <option>Bacon Forum</option>
+          <option>Steak Forum</option>
+          <option>Grilling Forum</option>
+        </select>
+
+        <%= partial 'title', locals: { label: 'Subject' } %>
+        <%= partial 'body' %>
+        <%= partial 'summary' %>
+      </fieldset>
+
+      <%= partial 'comments' %>
+    </div>
+
+    <div class="span4">
+      <%= partial 'publication' %>
+      <%= partial 'url_settings' %>
+    </div>
+  </div>
+</form>

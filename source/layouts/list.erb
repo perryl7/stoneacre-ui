@@ -1,0 +1,8 @@
+<% wrap_layout :layout do %>
+  <div class="page-header">
+    <a href="<%= current_page.data.edit_link %>" class="btn btn-primary btn-large btn-h1 pull-right">New <%= current_page.data.entity %></a>
+    <h1><%= data.page.title || "[title needed]" %></h1>
+  </div>
+
+  <%= yield %>
+<% end %>

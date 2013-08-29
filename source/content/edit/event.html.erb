@@ -1,0 +1,50 @@
+---
+title: Event
+entity: Event
+sidebar_id: event
+---
+
+<form>
+  <div class="row-fluid">
+    <div class="span8">
+      <ul class="breadcrumb">
+        <li class="active">Step 1: Event Details <span class="divider">&gt;</span></li>
+        <li><a href="event_registration.html">Step 2: Registration Details</a></li>
+      </ul>
+
+      <fieldset>
+        <legend>Event Details</legend>
+
+        <%= partial 'title' %>
+
+        <label for="venue">Venue Name</label>
+        <input type="text" id="venue" class="input-block-level">
+
+        <%= partial 'address' %>
+
+        <div class="row-fluid controls-date-time">
+          <div class="span5">
+            <label for="startDate">Start Date</label>
+            <input type="date" id="startDate" class="input-medium">
+            <input type="time" id="startTime" class="input-small">
+          </div>
+          <div class="span5">
+            <label for="endDate">End Date</label>
+            <input type="date" id="endDate" class="input-medium">
+            <input type="time" id="endTime" class="input-small">
+          </div>
+        </div>
+
+        <%= partial 'body', locals: { label: 'Description', rows: 8 } %>
+      </fieldset>
+
+      <%= partial 'comments' %>
+    </div>
+
+    <div class="span4">
+      <%= partial 'publication' %>
+      <%= partial 'image_settings' %>
+      <%= partial 'url_settings' %>
+    </div>
+  </div>
+</form>

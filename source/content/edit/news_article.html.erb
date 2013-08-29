@@ -1,0 +1,30 @@
+---
+title: News Article
+entity: Article
+---
+
+<form>
+  <div class="row-fluid">
+    <div class="span8">
+      <%= partial 'content_form' %>
+
+      <fieldset>
+        <legend>News Source</legend>
+
+        <label for="sourceName">Source Name</label>
+        <input id="sourceName" type="text" class="input-block-level">
+
+        <label for="sourceURL">Source URL</label>
+        <input id="sourceURL" type="url" class="input-block-level">
+      </fieldset>
+
+      <%= partial 'comments' %>
+    </div>
+
+    <div class="span4">
+      <%= partial 'publication' %>
+      <%= partial 'image_settings' %>
+      <%= partial 'url_settings' %>
+    </div>
+  </div>
+</form>

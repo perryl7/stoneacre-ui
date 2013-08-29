@@ -1,0 +1,28 @@
+<% table_headers ||= [] %>
+<% table_rows    ||= [] %>
+<% edit_link = current_page.data.edit_link || '#' %>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <% table_headers.each do |name| %>
+        <th><%= name %></th>
+      <% end %>
+      <th class="column-edit"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% table_rows.each do |row| %>
+      <tr>
+        <% row.each_with_index do |column, index| %>
+          <% if index == 0 %>
+            <td><a href="<%= edit_link %>"><%= column %></a></td>
+          <% else %>
+            <td><%= column %></td>
+          <% end %>
+        <% end %>
+        <td class="column-edit"><a href="<%= edit_link %>">Edit</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

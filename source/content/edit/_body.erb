@@ -1,0 +1,5 @@
+<% rows ||= 16 %>
+<% label ||= "Body" %>
+<% id = label.downcase.gsub(/\s+/, '_') %>
+<label for="<%= id %>"><%= label %></label>
+<textarea id="<%= id %>" class="input-block-level" rows="<%= rows %>"></textarea>

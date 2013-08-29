@@ -1,0 +1,13 @@
+<div class="well">
+  <fieldset class="url-settings">
+    <legend>URL Settings</legend>
+
+    <label class="checkbox">
+      <input type="checkbox" id="urlGenerate" checked="checked"> Automatically generate a URL for this <%= current_page.data.entity.downcase %>
+    </label>
+
+    <label for="urlAlias">URL Path</label>
+    <input type="text" id="urlPath" class="input-block-level" disabled>
+    <span class="help-block">Specify a URL for accessing this <%= current_page.data.entity.downcase %>. For example, use "about" for an About Us page. No slashes required.</span>
+  </fieldset>
+</div>

@@ -1,0 +1,41 @@
+---
+title: Event
+entity: Event
+sidebar_id: event
+---
+
+<form>
+  <div class="row-fluid">
+    <div class="span8">
+      <ul class="breadcrumb">
+        <li><a href="event.html">Step 1: Event Details</a> <span class="divider">&gt;</span></li>
+        <li class="active">Step 2: Registration Details</li>
+      </ul>
+
+      <fieldset>
+        <legend>Registration Details</legend>
+
+        <div class="row-fluid ticket-details">
+          <div class="span3">
+            <label for="ticketQuantity">Ticket Quantity</label>
+            <input id="ticketQuantity" type="number" class="input-block-level" min="0" placeholder="100">
+          </div>
+
+          <div class="span3">
+            <label for="ticketPrice">Ticket Price</label>
+            <input id="ticketPrice" type="text" class="input-block-level" placeholder="0.00" pattern="\d+(?:\.\d+)?">
+          </div>
+
+          <label class="span3 checkbox">
+            <input type="checkbox" id="registrationActive" checked="checked"> Enable Registration
+          </label>
+      </fieldset>
+    </div>
+
+    <div class="span4">
+      <%= partial 'publication' %>
+      <%= partial 'image_settings' %>
+      <%= partial 'url_settings' %>
+    </div>
+  </div>
+</form>

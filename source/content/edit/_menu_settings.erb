@@ -1,0 +1,31 @@
+<div class="well">
+  <fieldset class="menu-settings">
+    <legend>Menu Settings</legend>
+
+    <label class="checkbox">
+      <input type="checkbox" id="menuAddLink"> Add a menu link for this page
+    </label>
+
+    <label for="menuTitle">Menu Link Title</label>
+    <input type="text" id="menuTitle" class="input-block-level" disabled>
+
+    <label for="menuDescription">Menu Description</label>
+    <input type="text" id="menuDescription" class="input-block-level" disabled>
+    <span class="help-block">This is shown when hovering your mouse over the menu link</span>
+
+    <label for="menuParent">Parent Item</label>
+    <select id="menuParent" disabled>
+      <option>&lt;Main Menu&gt;</option>
+    </select>
+
+    <label for="menuWeight">Menu Order</label>
+    <select id="menuWeight" disabled>
+      <option>-10</option>
+      <option>-5</option>
+      <option selected="selected">0</option>
+      <option>5</option>
+      <option>10</option>
+    </select>
+    <span class="help-block">Menu links with lower order show up before those with higher order</span>
+  </fieldset>
+</div>

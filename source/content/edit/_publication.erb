@@ -1,0 +1,25 @@
+<div class="well">
+  <fieldset class="publication-settings">
+    <legend>Publication</legend>
+
+    <div class="btn-group">
+      <button type="submit" class="btn btn-primary" id="saveButton">Save Draft</button>
+      <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" id="saveTypes">
+        <li><a href="#" class="save">Save Draft</a></li>
+        <li><a href="#" class="publish-now">Publish Now</a></li>
+        <li><a href="#" class="publish-later">Publish Later</a></li>
+      </ul>
+    </div>
+
+    <button class="btn">Preview <%= current_page.data.entity %></button>
+
+    <div class="publish-date controls-date-time">
+      <label for="publishDate">Publish on:</label>
+      <input type="date" id="startDate" class="input-medium">
+      <input type="time" id="startTime" class="input-small">
+    </div>
+  </fieldset>
+</div>

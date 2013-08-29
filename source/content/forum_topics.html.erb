@@ -1,0 +1,13 @@
+---
+title: Forum Topics
+entity: Topic
+edit_link: /content/edit/forum_topic.html
+sidebar_id: forum
+---
+
+<% forum_titles = ['Bacon Forum', 'Steak Forum', 'Grilling Forum'] %>
+<% table_headers = ['Question', 'Forum'] %>
+<% table_rows = [] %>
+<% (1..5).each { table_rows << [ lorem.sentence, forum_titles.sample ] } %>
+
+<%= partial 'table', locals: { table_headers: table_headers, table_rows: table_rows } %>

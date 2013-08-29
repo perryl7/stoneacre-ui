@@ -1,0 +1,37 @@
+---
+title: Calendar
+entity: Event
+edit_link: /content/edit/calendar_event.html
+sidebar_id: calendar
+---
+
+<h3>July 3013</h3>
+
+<table class="calendar">
+  <thead>
+    <tr>
+    <% %w(Sun Mon Tues Wed Thur Fri Sat).each do |day_name| %>
+      <th><%= day_name %></th>
+    <% end %>
+    </tr>
+  </thead>
+  <tbody>
+  <% (0..4).each do |row| %>
+    <tr>
+      <% (((row * 7) + 1)..((row * 7) + 7)).each do |day| %>
+        <td>
+          <%= day <= 31 ? day : '' %>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<hr>
+
+<% table_headers = ['Title'] %>
+<% table_rows = [] %>
+<% (1..5).each { table_rows << [ lorem.sentence ] } %>
+
+<%= partial 'table', locals: { table_headers: table_headers, table_rows: table_rows } %>

@@ -1,0 +1,43 @@
+---
+title: Local Deal
+entity: Deal
+---
+
+<form>
+  <div class="row-fluid">
+    <div class="span8">
+      <fieldset>
+        <legend>Deal Content</legend>
+
+        <%= partial 'title' %>
+
+        <label>Image</label>
+        <button class="btn btn-input">Add Image</button>
+
+        <div class="row-fluid">
+          <div class="span9">
+            <label for="dealButton">Button Text</label>
+            <input id="dealButton" type="text" class="input-block-level" maxlength="40" placeholder="Save Today">
+            <span class="help-block">Button Text is limited to 40 characters</span>
+          </div>
+
+          <div class="span3">
+            <label>Example Button</label>
+            <button class="btn" id="exampleButton">Save Today</button>
+          </div>
+        </div>
+
+        <label for="dealURL">Deal URL</label>
+        <input id="dealURL" type="url" class="input-block-level">
+      </fieldset>
+
+      <%= partial 'comments' %>
+    </div>
+
+    <div class="span4">
+      <%= partial 'publication' %>
+      <%= partial 'url_settings' %>
+      <%= partial 'menu_settings' %>
+    </div>
+  </div>
+</form>
